@@ -1,0 +1,23 @@
+{
+  "name": "bcs-hw9",
+  "version": "1.0.0",
+  "description": "Create a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbbyNeko/BCS-HW9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbbyNeko/BCS-HW9/issues"
+  },
+  "homepage": "https://github.com/AbbyNeko/BCS-HW9#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0",
+    "jest": "^26.0.1"
+  }
+}
