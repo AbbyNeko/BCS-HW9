@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 const util = require('util');
-const axios = require('axios');
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -10,9 +9,6 @@ inquirer
         {
             message: "What is your GitHub username?",
             name: "githubuser"
-        }, {
-            message: "What is your GitHub email address?",
-            name: "email"
         }, {
             message: "What is the name of your project?",
             name: "projectname"
@@ -86,7 +82,7 @@ inquirer
 
         //Questions Section
 
-         fileContents += `\n## Questions\n![Image of AbbyNeko](https://avatars2.githubusercontent.com/u/17650466?v=4&s=200)\n\n**${githubuser}**\n\nIf you have any questions, please contact me at: ${email}`;
+         fileContents += `\n## Questions\n![Image of AbbyNeko](https://avatars2.githubusercontent.com/u/17650466?v=4&s=200)\n\n**${githubuser}**\n\nIf you have any questions, please contact me at: alimpioso@gmail.com`;
 
         return fileContents;
 
