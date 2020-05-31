@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 const util = require('util');
+const axios = require('axios');
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -9,6 +10,9 @@ inquirer
         {
             message: "What is your GitHub username?",
             name: "githubuser"
+        }, {
+            message: "What is your GitHub email address?",
+            name: "email"
         }, {
             message: "What is the name of your project?",
             name: "projectname"
@@ -19,7 +23,7 @@ inquirer
             message: "How do you install this project? If this question does not apply, reply with 'N/A'.",
             name: "installation"
         }, {
-            message: "What are the technologies used? Please list them out and separate them out using commas.",
+            message: "What technologies were used to create this project? Please list them out and separate them using commas.",
             name: "techused"
         }, {
             message: "How do you use this project?",
@@ -41,22 +45,27 @@ inquirer
 
     });
 
-    function createReadMeContents({ githubuser, projectname, purpose, installation, techused, usage, contributing, testing }) {
+    function createReadMeContents({ githubuser, email, projectname, purpose, installation, techused, usage, contributing, testing }) {
 
-        //Create project name and Purpose of project
-        let fileContents = `# ${projectname}\n${purpose}\n\n`;
+        //Create project name
+        let fileContents = `# ${projectname}\n`;
+
+        //badge
+        fileContents += `![Last Commit Badge](https://img.shields.io/github/last-commit/AbbyNeko/BCS-HW9)\n\n`;
+
+        //purpose of project
+        fileContents += `\n${purpose}\n\n`;
 
         //Creates Table of Contents
-        fileContents += `##Table of Contents\n`;
+        fileContents += `## Table of Contents\n`;
 
         //If installation question is answered with N/A, no installation section wil be added and it will not be in table of contents
         if(installation != 'N/A') {
         fileContents += `* Installation\n* Usage\n* Technologies Used\n* License\n* Contributing\n* Tests\n* Questions`;
-        fileContents += `## Installation\n${installation}\n\n`;
+        fileContents += `\n\n## Installation\n${installation}\n\n`;
         } else {
             //Creating table of contents without Installation section
-            fileContents += `* Usage\n* Built With\n* License\n* Contributing\n* Tests\n* Questions`;
-            fileContents += `\n\n`;
+            fileContents += `* Usage\n* Built With\n* License\n* Contributing\n* Tests\n* Questions\n\n`;
         }    
 
         //Creates bulleted list of Tech Used
@@ -76,8 +85,8 @@ inquirer
         fileContents += `\n## Tests\n${testing}\n\n`;
 
         //Questions Section
-        fileContents += `\n## Questions\n`;
 
+         fileContents += `\n## Questions\n![Image of AbbyNeko](https://avatars2.githubusercontent.com/u/17650466?v=4&s=200)\n\n**${githubuser}**\n\nIf you have any questions, please contact me at: ${email}`;
 
         return fileContents;
 

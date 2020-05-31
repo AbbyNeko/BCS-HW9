@@ -1,27 +1,41 @@
-# Weather Dashboard
-To show current weather conditions and 5-day forecast based on city name entered by user
+# a
+![Last Commit Badge](https://img.shields.io/github/last-commit/AbbyNeko/BCS-HW9)
 
-##Table of Contents
+
+a
+
+## Table of Contents
+* Installation
 * Usage
-* Built With
+* Technologies Used
 * License
 * Contributing
 * Tests
 * Questions
 
+## Installation
+a
+
 ## Usage
-You can type in a city name and press Search. Then, the current wether conditions and 5-day forecast for that city will display in the center.
+a
 
 ## Built With
-* HTML
-* CSS
-* JavaScript
-* Open Weather API
+* a
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
 ## Contributing
+a
+
 
 ## Tests
+a
+
 
 ## Questions
+![Image of AbbyNeko](https://avatars2.githubusercontent.com/u/17650466?v=4&s=200)
+**a**
+
+If you have any questions, please contact me at: a
