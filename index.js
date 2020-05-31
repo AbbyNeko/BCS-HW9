@@ -67,13 +67,13 @@ inquirer
         techArr.forEach(element => fileContents += `* ${element}\n`);
 
         //Licensing
-        fileContents += `\n## License\n[MIT](https://choosealicense.com/licenses/mit/)`;
+        fileContents += `\n## License\n[MIT](https://choosealicense.com/licenses/mit/)\n\n`;
 
         //Contributing Section
-        fileContents += `\n## Contributing\n`;
+        fileContents += `\n## Contributing\n${contributing}\n\n`;
 
         //Tests Section
-        fileContents += `\n## Tests\n`;
+        fileContents += `\n## Tests\n${testing}\n\n`;
 
         //Questions Section
         fileContents += `\n## Questions\n`;
