@@ -10,6 +10,12 @@ inquirer
             message: "What is your GitHub username?",
             name: "githubuser"
         }, {
+            message: "What is your GitHub email address?",
+            name: "email"
+        }, {
+            message: "What is the repo name of the project?",
+            name: "reponame"
+        }, {
             message: "What is the name of your project?",
             name: "projectname"
         }, {
@@ -41,13 +47,13 @@ inquirer
 
     });
 
-    function createReadMeContents({ githubuser, email, projectname, purpose, installation, techused, usage, contributing, testing }) {
+    function createReadMeContents({ githubuser, email, reponame, projectname, purpose, installation, techused, usage, contributing, testing }) {
 
         //Create project name
         let fileContents = `# ${projectname}\n`;
 
         //badge
-        fileContents += `![Last Commit Badge](https://img.shields.io/github/last-commit/AbbyNeko/BCS-HW9)\n\n`;
+        fileContents += `![Last Commit Badge](https://img.shields.io/github/last-commit/${githubuser}/${reponame})\n\n`;
 
         //purpose of project
         fileContents += `\n${purpose}\n\n`;
@@ -82,7 +88,7 @@ inquirer
 
         //Questions Section
 
-         fileContents += `\n## Questions\n![Image of AbbyNeko](https://avatars2.githubusercontent.com/u/17650466?v=4&s=200)\n\n**${githubuser}**\n\nIf you have any questions, please contact me at:`;
+         fileContents += `\n## Questions\n![Image of AbbyNeko](https://avatars2.githubusercontent.com/u/17650466?v=4&s=200)\n\n**${githubuser}**\n\nIf you have any questions, please contact me at: ${email}`;
 
         return fileContents;
 
