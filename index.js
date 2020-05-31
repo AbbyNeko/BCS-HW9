@@ -82,7 +82,7 @@ inquirer
 
         //Questions Section
 
-         fileContents += `\n## Questions\n![Image of AbbyNeko](https://avatars2.githubusercontent.com/u/17650466?v=4&s=200)\n\n**${githubuser}**\n\nIf you have any questions, please contact me at: alimpioso@gmail.com`;
+         fileContents += `\n## Questions\n![Image of AbbyNeko](https://avatars2.githubusercontent.com/u/17650466?v=4&s=200)\n\n**${githubuser}**\n\nIf you have any questions, please contact me at:`;
 
         return fileContents;
 
