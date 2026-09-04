@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/AbbyNeko/BCS-HW9#readme",
   "dependencies": {
-    "inquirer": "^7.1.0",
+    "inquirer": "^14.2.1",
     "jest": "^26.0.1"
   }
 }
